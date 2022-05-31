@@ -5,6 +5,10 @@ import java.util.Scanner;
 Тут новый коммент
  */
 
+/*
+и тут тоже
+ */
+
 public class Main {
     public static void main(String[] args) {
         // Ниже объявите пустой массив expenses для записи трат за неделю
