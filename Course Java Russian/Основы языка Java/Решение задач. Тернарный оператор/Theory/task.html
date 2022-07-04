@@ -1,0 +1,22 @@
+<html>
+ <head></head>
+ <body>
+  <h1>“ернарный оператор</h1> 
+  <p>»ногда бывает, что ветвление можно записать короче, чем обычно. Ёто возможно благодар€ тернарному оператору ветвлени€. “ернарным он называетс€ потому что принимает 3 значени€: одно услови€ и два результирующих значени€.&nbsp;ѕредставим себе задачу: вывести минимальное число из двух. »спользу€ обычное ветвление,&nbsp;можно написать такой код:</p> 
+  <pre><code class="language-java">Scanner sc = new Scanner(System.in);
+int a = sc.nextInt();
+int b = sc.nextInt();
+if (a &lt; b) {
+    System.out.println(a);
+}else{
+    System.out.println(b);
+}</code></pre> 
+  <p>ќднако, его можно сократить с помощью такой конструкции:</p> 
+  <p style="text-align: center;"><strong>(&lt;условие&gt;)&nbsp; ? &lt;значение, если истина&gt;&nbsp;: &lt;значение, если ложь&gt;</strong></p> 
+  <p>“аким образом получим следующее:</p> 
+  <pre><code class="language-java">Scanner sc = new Scanner(System.in);
+int a = sc.nextInt();
+int b = sc.nextInt();
+System.out.println((a &lt; b) ? a : b);</code></pre>
+ </body>
+</html>

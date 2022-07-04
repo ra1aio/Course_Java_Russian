@@ -1,0 +1,46 @@
+<html>
+ <head></head>
+ <body>
+  <h1>‘лаги</h1> 
+  <p>&nbsp;ѕредставим, что перед нами стоит задача определить, есть ли среди чисел, введЄнных пользователем, число 0. », если нет, вывести сообщение "NO", если же есть, то вывести "YES". Ќа самом деле, если бы не было услови€ с "NO",&nbsp;то задача решалась бы очевидно так:</p> 
+  <pre><code>import java.util.Scanner;
+
+class Example{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        for (int i = 0; i &lt; n; i++){
+            int a = sc.nextInt();
+            if (a == 0){
+                System.out.println("YES");
+                break;
+            }
+        }
+    }
+}</code></pre> 
+  <p>Ќо когда же тогда выводить "NO"? “ут нам поможет пон€тие флага. ‘лаг в программировании - булева€ переменна€, отвечающа€ за ответ на какой-либо вопрос. ¬ данном случае - есть ли 0?  ак правило такие переменные называют очень пон€тным именем и чаще всего называют начина€ с is. ¬от, как решаетс€ эта задача:</p> 
+  <p>&nbsp;</p> 
+  <p>&nbsp;</p> 
+  <pre><code>import java.util.Scanner;
+
+class Example{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        boolean is_0 = false;
+        for (int i = 0; i &lt; n; i++){
+            int a = sc.nextInt();
+            if (a == 0){
+                is_0 = true;
+                break;
+            }
+        }
+        if (is_0)
+            System.out.println("YES");
+        else
+            System.out.println("NO");
+    }
+}</code></pre> 
+  <p>∆елающие так же могут почитать дополнительно о флагах <a href="http://www.tvd-home.ru/prog/7_1" rel="noopener noreferrer nofollow">здесь</a>.</p>
+ </body>
+</html>

@@ -1,0 +1,47 @@
+<html>
+ <head></head>
+ <body>
+  <h1>¬озвращение значени€ из метода</h1> 
+  <p>ћетоды могут возвращать некоторое значение. ƒл€ этого примен€етс€ оператор&nbsp;<strong>return.&nbsp;</strong>ѕосле оператора <strong>return</strong> указываетс€ возвращаемое значение, которое €вл€етс€ результатом метода.&nbsp;</p> 
+  <p>Ќапример:</p> 
+  <pre><code>public class Program{
+
+&nbsp;&nbsp;&nbsp;&nbsp;public static void main (String args[]){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int x = sum(1, 2, 3);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int y = sum(1, 4, 9);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(x);&nbsp; // 6
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(y);&nbsp; // 14
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;
+
+    static int sum(int a, int b, int c){
+        return a + b + c;&nbsp;&nbsp;&nbsp;&nbsp;
+    }
+
+}</code></pre> 
+  <p><br> ѕри этом возвращаемое значение всегда должно иметь тот же тип, что значитс€ в определении функции. » если функци€ возвращает значение типа <strong>int</strong>, то после оператора <strong>return</strong> стоит целочисленное значение, которое €вл€етс€ объектом типа <strong>int</strong>.  ак в данном случае это сумма значений параметров метода. ¬ методе в качестве типа возвращаемого значени€ вместо <strong>void</strong> используетс€ любой другой тип. ¬ данном случае метод <strong>sum</strong> возвращает значение типа <strong>int</strong>, поэтому этот тип указываетс€ перед названием метода. ѕричем если в качестве возвращаемого типа дл€ метода определен любой другой, отличный от <strong>void</strong>, то метод об€зательно должен использовать оператор&nbsp;<strong>return</strong>&nbsp;дл€ возвращени€ значени€.</p> 
+  <p>ћетод может использовать несколько вызовов оператора <strong>return</strong> дл€ возвращени€ разных значений в зависимости от некоторых условий:</p> 
+  <pre><code class="language-java">public class Program{&nbsp;&nbsp;
+
+&nbsp;&nbsp;&nbsp;&nbsp;public static void main (String args[]){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(daytime(7));&nbsp;&nbsp;&nbsp;&nbsp; // Good morning
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(daytime(13));&nbsp;&nbsp;&nbsp; // Good after noon
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(daytime(18));&nbsp;&nbsp;&nbsp; // Good evening
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(daytime(2));&nbsp;&nbsp;&nbsp;&nbsp; // Good night
+        System.out.println(daytime(30));&nbsp;&nbsp;&nbsp; // Invalid data
+&nbsp;&nbsp;&nbsp;&nbsp;}
+
+&nbsp;&nbsp;&nbsp;&nbsp;static String daytime(int hour){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (hour &gt;23 || hour &lt; 0)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Invalid data";
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(hour &gt; 21 || hour &lt; 6)
+&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Good night";
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(hour &gt;= 15)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Good evening";
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(hour &gt;= 11)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Good after noon";
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Good morning";
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}</code></pre> 
+  <p>«десь метод <strong>daytime</strong> возвращает значение типа <strong>String</strong>, то есть строку, и в зависимости от значени€ параметра hour возвращаема€ строка будет различатьс€.</p>
+ </body>
+</html>
